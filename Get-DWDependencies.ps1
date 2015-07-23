@@ -38,8 +38,8 @@ function Get-DWDependencies
     {
         $errors = $null
         $parser = [System.Management.Automation.PSParser]::Tokenize($Definition, [ref]$errors)
-        $commandDependencies = $parser | ? {$_.Type -eq "Command"} | % Content
-
-        [pscustomobject]@{ Module=$Module; Command=$Command; Dependencies = $commandDependencies }
+        $dependencies = $parser | ? {$_.Type -eq "Command"} | % Content | Select-Object -Unique
+        
+        $dependencies | % { [pscustomobject]@{ Module=$Module; Command=$Command; Dependency = $_ } }
     }
 }
