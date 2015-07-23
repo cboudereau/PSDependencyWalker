@@ -14,4 +14,4 @@ this cmdlet return the module name, command name and dependencies
   
 ```powershell
 Get-module teamcity | Get-DWCommand | Get-DWDependencies
-```powershell
+```
