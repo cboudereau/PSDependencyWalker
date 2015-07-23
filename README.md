@@ -15,3 +15,13 @@ this cmdlet return the module name, command name and dependencies
 ```powershell
 Get-module teamcity | Get-DWCommand | Get-DWDependencies
 ```
+
+## How to Analyse Dependencies
+1. Get the command of the module to refactor for example Teamcity Module
+  ```powershell
+  $teamcity = Get-module teamcity | Get-DWCommand | % Command
+  ```
+2. Get the dependencies for all installed modules
+  ```powershell
+  Get-module | Get-DWCommand | Get-DWDependencies | ? { $teamcity -contains $_.Dependency }
+  ```
