@@ -4,7 +4,7 @@
 Get the Command and its definition
 When you pipe Get-Module with this cmdlet, it return the module name, commands and definitions
 ```powershell
-C:\PS> Get-Module Get-TCBuildType | Get-DWCommand
+C:\PS> Get-Command Get-TCBuildType | Get-DWCommand
 ```
 
 ## Get-DWDependencies
