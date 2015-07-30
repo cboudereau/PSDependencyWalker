@@ -9,7 +9,7 @@
     Mandatory, Can be piped with Get-Module
 
     .EXAMPLE
-    C:\PS> Get-Module Get-TCBuildType | Get-DWCommand
+    C:\PS> Get-Module Teamcity | Get-DWCommand
 
 #>
 function Get-DWCommand
