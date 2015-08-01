@@ -2,7 +2,7 @@
 
 ## Get-DWCommand
 Get the Command and its definition
-When you pipe Get-Module with this cmdlet, it return the module name, commands and definitions
+When you pipe Get-Command with this cmdlet, it return the module name, commands and definitions
 ```powershell
 C:\PS> Get-Command Get-TCBuildType | Get-DWCommand
 ```
